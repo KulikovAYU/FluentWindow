@@ -46,6 +46,9 @@
                                             <DataTrigger Binding="{Binding Path=ExtendViewIntoTitlebar, RelativeSource={RelativeSource AncestorType={x:Type local:FluentWindow}}}" Value="True">
                                                 <Setter Property="Visibility" Value="Collapsed"/>
                                             </DataTrigger>
+                                            <DataTrigger Binding="{Binding Path=WindowStyle, RelativeSource={RelativeSource AncestorType={x:Type Window}}}" Value="None">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                            </DataTrigger>
                                         </Style.Triggers>
                                     </Style>
                                 </Border.Style>
@@ -87,6 +90,9 @@
                                             <Style.Triggers>
                                                 <DataTrigger Binding="{Binding Path=UseNativeCaptionButtons, RelativeSource={RelativeSource AncestorType={x:Type local:FluentWindow}}}" Value="False">
                                                     <Setter Property="Visibility" Value="Visible"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding Path=WindowStyle, RelativeSource={RelativeSource AncestorType={x:Type Window}}}" Value="None">
+                                                    <Setter Property="Visibility" Value="Collapsed"/>
                                                 </DataTrigger>
                                             </Style.Triggers>
                                         </Style>
